@@ -14,6 +14,9 @@
 
     <!-- Navigation Bar -->
     <nav data-aos="fade-down" data-aos-duration="1000">
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
         <ul>
             <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
             <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
@@ -26,7 +29,7 @@
     <header data-aos="zoom-in" data-aos-duration="1000">
         <h1>Welcome to My GitHub Profile</h1>
         <p>My name is Muhammad Ameen, and I am a Computer Science graduate passionate about software development, cloud computing, and web technologies.</p>
-        <img src="https://media.istockphoto.com/id/1477244775/vector/flat-design-cartoon-illustration-software-development-concept.jpg?s=612x612&w=0&k=20&c=GefHp-vkljJuwOVTkg8g6RIgtsTt6TbBfRCvbW9VRJE=" alt="Header Image" class="header-image">
+        <img src="https://media.istockphoto.com/id/1477244775/vector/flat-design-cartoon-illustration-software-development-concept.jpg?s=612x612&w=0&k=20&c=GefHp-vkljJuwOVTkg8g6RIgtsTt6TbBfRCvbW9VRJE=" alt="Header Image" class="header-image" loading="lazy">
     </header>
 
     <section id="about" data-aos="fade-right" data-aos-duration="1000">
@@ -37,16 +40,16 @@
     <section id="skills" data-aos="fade-left" data-aos-duration="1000">
         <h2>Skills</h2>
         <ul>
-            <li><i class="fas fa-laptop-code"></i> <strong>Programming Languages:</strong> C#, Java, Python</li>
-            <li><i class="fas fa-desktop"></i> <strong>Web Development:</strong> HTML, CSS, JavaScript, WordPress, MVC</li>
-            <li><i class="fas fa-database"></i> <strong>Databases:</strong> MySQL, MongoDB, Oracle</li>
-            <li><i class="fas fa-cloud"></i> <strong>Cloud Computing:</strong> AWS, Azure (Basic)</li>
-            <li><i class="fas fa-network-wired"></i> <strong>Networking:</strong> CIDR, OSI Model, DNS, TCP/UDP, DHCP, Routing & Switching</li>
-            <li><i class="fas fa-cogs"></i> <strong>Operating Systems:</strong> Windows, Linux</li>
-            <li><i class="fas fa-tools"></i> <strong>Tools & Technologies:</strong> Visual Studio, GitHub, SQL Server, Typesense</li>
-            <li><i class="fas fa-users"></i> <strong>Soft Skills:</strong> Problem-solving, teamwork, project management, adaptability</li>
+            <li><strong>Programming Languages:</strong> C#, Java, Python</li>
+            <li><strong>Web Development:</strong> HTML, CSS, JavaScript, WordPress, MVC</li>
+            <li><strong>Databases:</strong> MySQL, MongoDB, Oracle</li>
+            <li><strong>Cloud Computing:</strong> AWS, Azure (Basic)</li>
+            <li><strong>Networking:</strong> CIDR, OSI Model, DNS, TCP/UDP, DHCP, Routing & Switching</li>
+            <li><strong>Operating Systems:</strong> Windows, Linux</li>
+            <li><strong>Tools & Technologies:</strong> Visual Studio, GitHub, SQL Server, Typesense</li>
+            <li><strong>Soft Skills:</strong> Problem-solving, teamwork, project management, adaptability</li>
         </ul>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTntbVvAfU7JG8uLo-poU18NdzbQ3a94jpEHA&s" alt="Skills Image" class="section-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTntbVvAfU7JG8uLo-poU18NdzbQ3a94jpEHA&s" alt="Skills Image" class="section-image" loading="lazy">
     </section>
 
     <section id="experience" data-aos="fade-up" data-aos-duration="1000">
@@ -75,7 +78,6 @@
         <p>Developed a car dealership website using C#, MVC, and API integrations with Autotrader and Cars.co.za.</p>
         <li>Website: <a href="https://www.theautoagents.co.za" target="_blank">TheAutoAgents.co.za</a></li>
 
-
         <h3>Car Dealership Application</h3>
         <p>Designed a robust Android app featuring user authentication, car listings, test drive bookings, and a finance calculator.</p>
 
@@ -98,9 +100,15 @@
     <!-- AOS JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true, // Animation will happen only once
-            offset: 120, // Offset (in px) from the original trigger point
+        AOS.init({ once: true, offset: 120 });
+    </script>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('nav ul');
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('showing');
         });
     </script>
 
